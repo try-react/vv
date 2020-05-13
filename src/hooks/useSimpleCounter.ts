@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-export const useCounter2 = () => {
+export const useSimpleCounter = () => {
   const [count, setCount] = useState(0);
   const countUp = useCallback(() => setCount(count + 1), [count]);
 
@@ -10,4 +10,4 @@ export const useCounter2 = () => {
   };
 };
 
-export type Props = ReturnType<typeof useCounter2>;
+export type Props = ReturnType<typeof useSimpleCounter>;

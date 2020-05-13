@@ -1,18 +1,18 @@
 import React, { FC, useState, useCallback } from "react";
 
-export const Counter: FC = () => {
+export const EasyCounter: FC = () => {
   const [count, setCount] = useState(0);
   const countUp = useCallback(() => setCount(count + 1), [count]);
 
   return (
     <>
-      <h2>Counter</h2>
+      <h2>簡単なコンポーネント</h2>
       <ul>
         <li>useStateを、内包しているComponent</li>
-        <li>pagesから、propsで何も貰わない</li>
+        <li>pages/index.tsxから、propsで何も貰わない</li>
       </ul>
 
-      <div>
+      <div className="count-area">
         <p>カウント: {count}</p>
         <button type="button" onClick={countUp}>
           カウントアップ
@@ -21,5 +21,3 @@ export const Counter: FC = () => {
     </>
   );
 };
-
-// 簡単とシンプルは違うよ

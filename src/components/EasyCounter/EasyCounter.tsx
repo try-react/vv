@@ -13,8 +13,8 @@ export const EasyCounter: FC = () => {
       </ul>
 
       <div className="count-area">
-        <p>カウント: {count}</p>
-        <button type="button" onClick={countUp}>
+        <p data-testid="label">カウント: {count}</p>
+        <button type="button" onClick={countUp} data-testid="button">
           カウントアップ
         </button>
       </div>

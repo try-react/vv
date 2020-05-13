@@ -10,8 +10,8 @@ export const SimpleCounter: FC<Props> = (props) => (
     </ul>
 
     <div className="count-area">
-      <p>カウント: {props.count}</p>
-      <button type="button" onClick={props.countUp}>
+      <p data-testid="label">カウント: {props.count}</p>
+      <button type="button" onClick={props.countUp} data-testid="button">
         カウントアップ
       </button>
     </div>

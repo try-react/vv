@@ -1,13 +1,15 @@
 import React from "react";
 import { render, cleanup, fireEvent } from "@testing-library/react";
-import { EasyCounter } from ".";
+import { SimpleCounter } from ".";
+import { Props } from "~/hooks/useSimpleCounter";
 
-const initState = {
+const props: Props = {
   count: 0,
+  countUp: jest.fn,
 };
 
 const getTarget = () => {
-  const { getByTestId } = render(<EasyCounter />);
+  const { getByTestId } = render(<SimpleCounter {...props} />);
 
   return {
     label: getByTestId("label"),
@@ -18,17 +20,16 @@ const getTarget = () => {
 beforeEach(cleanup);
 
 it("初期状態", () => {
-  const expected = `カウント: ${initState.count}`;
+  const expected = `カウント: ${props.count}`;
   const el = getTarget();
-
   expect(el.label.innerHTML).toEqual(expected);
 });
 
 it("カウントアップ操作", () => {
   const clickCnt = 3;
-  const expected = `カウント: ${clickCnt}`;
+  const spy = jest.spyOn(props, "countUp");
   const el = getTarget();
 
   [...Array(clickCnt)].forEach(() => fireEvent.click(el.button));
-  expect(el.label.innerHTML).toEqual(expected);
+  expect(spy).toHaveBeenCalledTimes(clickCnt);
 });

@@ -9,10 +9,10 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noUnusedLocals": true /* Report errors on unused locals. */,
-    "noUnusedParameters": true /* Report errors on unused parameters. */,
-    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
-    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -23,7 +23,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
+      "~/*": [
+        "src/*"
+      ]
     }
   },
   "exclude": [

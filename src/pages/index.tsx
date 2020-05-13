@@ -14,9 +14,8 @@ const Component: NextPage = () => {
       <EasyCounter />
       <hr />
       <SimpleCounter count={count} countUp={countUp} />
-      <hr />
-      ああああああ いいいいいいい うううう
     </>
   );
 };
+
 export default Component;

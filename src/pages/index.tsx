@@ -6,12 +6,12 @@ const Component: NextPage = () => (
   <ul>
     <li>
       <Link href="/easy">
-        <a>EasyCounter</a>
+        <a>簡単なカウンター</a>
       </Link>
     </li>
     <li>
       <Link href="/simple">
-        <a>SimpleCounter</a>
+        <a>シンプルなカウンター</a>
       </Link>
     </li>
   </ul>

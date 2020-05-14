@@ -26,7 +26,7 @@ it("初期状態", () => {
 
 it("カウントアップをクリックして、カウントが増えたか", () => {
   const clickCnt = 3;
-  const expected = `${clickCnt}`;
+  const expected = clickCnt.toString();
   const el = getTarget();
   [...Array(clickCnt)].forEach(() => fireEvent.click(el.button));
 

@@ -20,10 +20,10 @@ const getTarget = () => {
 beforeEach(cleanup);
 
 it("初期状態", () => {
-  const expected = props.count.toString();
   const el = getTarget();
 
-  expect(el.label.innerHTML).toEqual(expected);
+  expect(el.label.innerHTML).toBeDefined();
+  expect(el.button.innerHTML).toBeDefined();
 });
 
 it("カウントアップをクリックして、実行されたか", () => {

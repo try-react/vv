@@ -8,10 +8,6 @@ export const SimpleCounter: FC<Props> = (props) => (
       <li>pages/index.tsxから、propsを貰う</li>
     </ul>
     <div className="counter">
-      <p>
-        カウント:
-        <span data-testid="label">{props.count}</span>
-      </p>
       <button
         type="button"
         onClick={props.countUp}
@@ -20,6 +16,10 @@ export const SimpleCounter: FC<Props> = (props) => (
       >
         カウントアップ
       </button>
+      <p>
+        カウント:
+        <span data-testid="label">{props.count}</span>
+      </p>
     </div>
   </>
 );

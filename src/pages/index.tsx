@@ -1,21 +1,20 @@
 import React from "react";
 import { NextPage } from "next";
-import { EasyCounter } from "~/components/EasyCounter";
-import { SimpleCounter } from "~/components/SimpleCounter";
-import { useSimpleCounter } from "~/hooks/useSimpleCounter";
+import Link from "next/link";
 
-const Component: NextPage = () => {
-  const { count, countUp } = useSimpleCounter();
-
-  return (
-    <>
-      <h1>簡単なコンポーネントとシンプルなコンポーネント</h1>
-      <hr />
-      <EasyCounter />
-      <hr />
-      <SimpleCounter count={count} countUp={countUp} />
-    </>
-  );
-};
+const Component: NextPage = () => (
+  <ul>
+    <li>
+      <Link href="/easy">
+        <a>EasyCounter</a>
+      </Link>
+    </li>
+    <li>
+      <Link href="/simple">
+        <a>SimpleCounter</a>
+      </Link>
+    </li>
+  </ul>
+);
 
 export default Component;

@@ -18,17 +18,17 @@ const getTarget = () => {
 beforeEach(cleanup);
 
 it("初期状態", () => {
-  const expected = `カウント: ${initState.count}`;
+  const expected = initState.count.toString();
   const el = getTarget();
 
   expect(el.label.innerHTML).toEqual(expected);
 });
 
-it("カウントアップ操作", () => {
+it("カウントアップをクリックして、カウントが増えたか", () => {
   const clickCnt = 3;
-  const expected = `カウント: ${clickCnt}`;
+  const expected = `${clickCnt}`;
   const el = getTarget();
-
   [...Array(clickCnt)].forEach(() => fireEvent.click(el.button));
+
   expect(el.label.innerHTML).toEqual(expected);
 });

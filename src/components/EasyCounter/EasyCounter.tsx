@@ -9,15 +9,14 @@ export const EasyCounter: FC = () => {
       <h2>簡単なコンポーネント</h2>
       <ul>
         <li>useStateを、内包しているComponent</li>
-        <li>pages/index.tsxから、propsで何も貰わない</li>
       </ul>
 
-      <div className="count-area">
-        <p data-testid="label">カウント: {count}</p>
-        <button type="button" onClick={countUp} data-testid="button">
-          カウントアップ
-        </button>
-      </div>
+      <p>
+        カウント: <span data-testid="label">{count}</span>
+      </p>
+      <button type="button" onClick={countUp} data-testid="button">
+        カウントアップ
+      </button>
     </>
   );
 };

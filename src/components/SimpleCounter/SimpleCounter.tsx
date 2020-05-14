@@ -5,15 +5,14 @@ export const SimpleCounter: FC<Props> = (props) => (
   <>
     <h2>シンプルなコンポーネント</h2>
     <ul>
-      <li>useStateを、内包していないComponent</li>
       <li>pages/index.tsxから、propsを貰う</li>
     </ul>
 
-    <div className="count-area">
-      <p data-testid="label">カウント: {props.count}</p>
-      <button type="button" onClick={props.countUp} data-testid="button">
-        カウントアップ
-      </button>
-    </div>
+    <p>
+      カウント: <span data-testid="label">{props.count}</span>
+    </p>
+    <button type="button" onClick={props.countUp} data-testid="button">
+      カウントアップ
+    </button>
   </>
 );

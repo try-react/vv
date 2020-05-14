@@ -20,16 +20,17 @@ const getTarget = () => {
 beforeEach(cleanup);
 
 it("初期状態", () => {
-  const expected = `カウント: ${props.count}`;
+  const expected = props.count.toString();
   const el = getTarget();
+
   expect(el.label.innerHTML).toEqual(expected);
 });
 
-it("カウントアップ操作", () => {
+it("カウントアップをクリックして、実行されたか", () => {
   const clickCnt = 3;
   const spy = jest.spyOn(props, "countUp");
   const el = getTarget();
-
   [...Array(clickCnt)].forEach(() => fireEvent.click(el.button));
+
   expect(spy).toHaveBeenCalledTimes(clickCnt);
 });

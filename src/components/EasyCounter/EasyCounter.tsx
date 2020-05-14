@@ -10,13 +10,20 @@ export const EasyCounter: FC = () => {
       <ul>
         <li>useStateを、内包しているComponent</li>
       </ul>
+      <div className="counter">
+        <p>
+          カウント: <span data-testid="label">{count}</span>
+        </p>
 
-      <p>
-        カウント: <span data-testid="label">{count}</span>
-      </p>
-      <button type="button" onClick={countUp} data-testid="button">
-        カウントアップ
-      </button>
+        <button
+          type="button"
+          onClick={countUp}
+          data-testid="button"
+          className="count-button"
+        >
+          カウントアップ
+        </button>
+      </div>
     </>
   );
 };

@@ -15,10 +15,10 @@ jobs:
         with:
             node-version: ${{ matrix.node-version }}
 
-    - name: setup
+      - name: setup
         run: yarn
 
-    - name: Upload coverage to Codecov
+      - name: Upload coverage to Codecov
         run: yarn jest --coverage
         uses: codecov/codecov-action@v1.0.3
         with:

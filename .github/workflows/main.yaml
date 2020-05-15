@@ -14,10 +14,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: setup
-        run: yarn
+      - run: yarn
+      
       - name: setup2
-        run: yarn jest --coverage
+      - run: yarn jest --coverage
         uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}

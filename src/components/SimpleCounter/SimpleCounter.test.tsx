@@ -22,8 +22,8 @@ beforeEach(cleanup);
 it("初期状態", () => {
   const el = getTarget();
 
-  expect(el.label.innerHTML).toBeDefined();
-  expect(el.button.innerHTML).toBeDefined();
+  expect(el.label).toBeDefined();
+  expect(el.button).toBeDefined();
 });
 
 it("カウントアップをクリックして、実行されたか", () => {

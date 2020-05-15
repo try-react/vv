@@ -16,5 +16,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: setup
         run: yarn
-        - name: setup
+      - name: setup2
         run: yarn

@@ -5,7 +5,7 @@ export const SimpleCounter: FC<Props> = (props) => (
   <>
     <h2>シンプルなコンポーネント</h2>
     <ul>
-      <li>pages/index.tsxから、propsを貰う</li>
+      <li>pages/から、propsを貰う</li>
     </ul>
     <div className="counter">
       <button

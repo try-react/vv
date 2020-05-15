@@ -16,10 +16,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: setup
-      - run: yarn
-      
-      - name: setup2
-      - run: yarn jest --coverage
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{secrets.CODECOV_TOKEN}}
+        - run: yarn
+        - run: yarn jest --coverage
+            uses: codecov/codecov-action@v1
+            with:
+            token: ${{secrets.CODECOV_TOKEN}}

@@ -1,8 +1,8 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 
 export const useSimpleCounter = () => {
   const [count, setCount] = useState(0);
-  const countUp = useCallback(() => setCount(count + 1), [count]);
+  const countUp = () => setCount(count + 1);
 
   return {
     count,

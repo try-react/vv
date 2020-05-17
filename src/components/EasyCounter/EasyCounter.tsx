@@ -1,8 +1,8 @@
-import React, { FC, useState, useCallback } from "react";
+import React, { FC, useState } from "react";
 
 export const EasyCounter: FC = () => {
   const [count, setCount] = useState(0);
-  const countUp = useCallback(() => setCount(count + 1), [count]);
+  const countUp = () => setCount(count + 1);
 
   return (
     <>

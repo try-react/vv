@@ -6,7 +6,7 @@ export const EasyCounter: FC = () => {
 
   return (
     <>
-      <h2>簡単なコンポーネント</h2>
+      <h2>簡単なカウンター</h2>
       <ul>
         <li>useStateを、内包しているComponent</li>
       </ul>

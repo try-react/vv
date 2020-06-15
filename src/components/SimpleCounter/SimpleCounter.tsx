@@ -3,7 +3,7 @@ import { Props } from "~/hooks/useSimpleCounter";
 
 export const SimpleCounter: FC<Props> = (props) => (
   <>
-    <h2>シンプルなコンポーネント</h2>
+    <h2>シンプルなカウンター</h2>
     <ul>
       <li>pages/から、propsを貰う</li>
     </ul>
